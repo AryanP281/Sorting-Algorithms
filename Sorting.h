@@ -36,15 +36,14 @@ template<typename T> void BubbleSort(T* arr, int len)
 	if (len <= 1)
 		return;
 
-	while (true)
+	for (int a = 0; a < len - 1; ++a)
 	{
 		bool swapped = false;
-
-		for (int a = 0; a < len - 1; ++a)
+		for(int b = 0; b < len - a - 1; ++b)
 		{
-			if (arr[a] > arr[a + 1])
+			if (arr[b] > arr[b + 1])
 			{
-				Swap<T>(&arr[a], &arr[a + 1]);
+				Swap<T>(&arr[b], &arr[b + 1]);
 				swapped = true;
 			}
 		}
